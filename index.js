@@ -178,6 +178,7 @@ addressTextBox.addEventListener("keypress", async function (e) {
         console.log(restrooms);
         
     // pull information from the API and place on display -Dom
+
     let work = restrooms.map((restroom) => {
         return `
         <div id="separate">
@@ -190,7 +191,7 @@ addressTextBox.addEventListener("keypress", async function (e) {
             <li>${restroom.upvote > 0 ? `Upvotes: ${restroom.upvote}` : ` `}</li>
             <li>${restroom.downvote > 0 ? `Downvotes: ${restroom.downvote}` : ` `}</li>
         </div>
-            `
+
             
         })
         restroomUL.innerHTML = work.join(" ")
