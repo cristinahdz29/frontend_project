@@ -139,7 +139,7 @@ li {
 }
 
 .separate:hover {
-  background-color: #ebe5e5;
+  background-color: #f3eded;
 }
 
 b {
@@ -231,7 +231,7 @@ b {
 
   #searchDiv {
     text-align: left;
-    width: 70%;
+    width: 50%;
   }
   
   #searchButton {
