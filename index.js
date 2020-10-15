@@ -175,7 +175,7 @@ searchButton.addEventListener("click", async function () {
             }</li> 
 
             <div id="searchButton">
-            <a href="https://www.google.com/maps/dir/?api=1&${restroom.latitude},${restroom.longitude}" target="_blank">Directions<a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=${restroom.latitude},${restroom.longitude}" target="_blank">Directions<a>
         </div>
         </div>
         `;
