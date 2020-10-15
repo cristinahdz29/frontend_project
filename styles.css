@@ -133,9 +133,9 @@ li {
 
 .separate {
   background-color: white;
-  border-radius: 15px;
-  margin: 10px;
   padding: 10px;
+  border-radius: 3px;
+  margin: 8px;
 }
 
 .separate:hover {
@@ -204,9 +204,8 @@ b {
 @media only screen and (min-device-width: 601px) {
   /* #searchDiv {
     /* width: 400px; */
-  /* } */ */
-
-  b {
+  /* } */
+  */ b {
     font-size: 20px;
   }
 
@@ -220,26 +219,29 @@ b {
     text-align: center;
   } */
 
+  /* #addressTextBox {
+    width: 77%;
+  } */
+
   #container {
     display: flex;
     flex-direction: column;
     align-items: initial;
     width: 100%;
     justify-content: center;
-    
   }
 
   #searchDiv {
     text-align: left;
     width: 50%;
   }
-  
+
   #searchButton {
     width: 14%;
   }
 
   #addressTextBox {
-    width: 81%;
+    width: 77%;
   }
   #mapListDiv {
     display: flex;
@@ -290,7 +292,6 @@ b {
 
   #mapDiv {
     width: 50%;
-    
   }
 
   .separate {
