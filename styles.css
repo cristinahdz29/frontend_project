@@ -1,8 +1,21 @@
 body {
-  background-color: rgb(0, 162, 255);
+  background: rgb(0, 162, 255);
+  /* background: radial-gradient(
+    circle,
+    rgba (0, 162, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 92%
+  ); */
+  /* background-image: linear-gradient(to bottom, #00a2ff, #009af2, #0091e5, #0089d8, #0081cb, #4087cb, #5c8dcb, #7194cb, #9cacd8, #c1c6e4, #e2e2f1, #ffffff); */
   /* background: linear-gradient(125deg, rgb(51, 49, 49), rgb(0, 162, 255)); */
-  width: 100%;
+  width: 94%;
   font-family: Spectral;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: underline;
+  font-size: 15px;
 }
 
 #container {
@@ -51,7 +64,7 @@ p {
   margin-top: 0px;
   border-radius: 15px 15px;
   text-align: center;
-  width: 80%;
+  width: 94%;
 }
 
 #addressTextBox {
@@ -114,6 +127,8 @@ p {
   margin-right: 40px; */
   width: 100%;
   font-size: 10px;
+  height: 500px;
+  overflow: auto;
 }
 
 #restroomUL {
@@ -136,6 +151,8 @@ li {
   padding: 10px;
   border-radius: 3px;
   margin: 8px;
+  margin-block-start: 0;
+  /* margin-block-end: 0; */
 }
 
 .separate:hover {
@@ -151,6 +168,10 @@ b {
   #container {
     display: flex;
     flex-direction: column;
+  }
+
+  #searchDiv {
+    width: 89%;
   }
 
   #content {

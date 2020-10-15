@@ -43,6 +43,8 @@ async function getLocation() {
         <li style = "color: green;">${restroom.upvote > 0 ? `Upvotes: ${restroom.upvote}` : ` `}</li>
         <li style = "color: red;">${restroom.downvote > 0 ? `Downvotes: ${restroom.downvote}` : ` `}</li>
     </div>
+
+    // <div>
         `;
       });
       restroomUL.insertAdjacentHTML("beforeend", work.join(" "));
@@ -121,16 +123,10 @@ function renderMapAndMarkers(center, markers) {
     mapMarker.addListener("mouseover", function () {
       infowindow.open(map, mapMarker);
       infowindow.setContent(
-        `<div class="separate">
-        <h3>${restroom.name}</h3>
-        <li>${restroom.street} ${restroom.city}, ${restroom.state}</li><br>
-        <li>${restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `}</li><br>
-        <li>${restroom.accessible == true ? `Wheelchair Accessible: Yes` : ` `}</li>
-        <li>${restroom.changing_table == true ? `Changing Table: Yes` : ` `}</li>
-        <li>${restroom.unisex == true ? `Unisex: Yes` : ` `}</li>
-        <li style = "color: green;">${restroom.upvote > 0 ? `Upvotes: ${restroom.upvote}` : ` `}</li>
-        <li style = "color: red;">${restroom.downvote > 0 ? `Downvotes: ${restroom.downvote}` : ` `}</li>
-    </div>
+        `<div>
+        <h3>${marker.name}</h3>
+        ${marker.street} ${marker.city}, ${marker.state}
+        </div>
       `
       );
     });
