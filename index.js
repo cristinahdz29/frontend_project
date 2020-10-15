@@ -34,7 +34,9 @@ async function getLocation() {
       let work = restrooms.map((restroom) => {
         return `
         <div class="separate">
-        <h3>${restroom.name}</h3>
+        <div id="store2">
+        <b id="store">${restroom.name} </b><i> ${restroom.distance.toFixed(2)} mi.</i>
+        </div>
         <li>${restroom.street} ${restroom.city}, ${restroom.state}</li><br>
         <li>${restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `}</li><br>
         <li>${restroom.accessible == true ? `Wheelchair Accessible: Yes` : ` `}</li>
@@ -123,10 +125,18 @@ function renderMapAndMarkers(center, markers) {
     mapMarker.addListener("mouseover", function () {
       infowindow.open(map, mapMarker);
       infowindow.setContent(
-        `<div>
-        <h3>${marker.name}</h3>
-        ${marker.street} ${marker.city}, ${marker.state}
+        `<div class="separate">
+        <div id="store2">
+        <b id="store">${restroom.name} </b><i> ${restroom.distance.toFixed(2)} mi.</i>
         </div>
+        <li>${restroom.street} ${restroom.city}, ${restroom.state}</li><br>
+        <li>${restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `}</li><br>
+        <li>${restroom.accessible == true ? `Wheelchair Accessible: Yes` : ` `}</li>
+        <li>${restroom.changing_table == true ? `Changing Table: Yes` : ` `}</li>
+        <li>${restroom.unisex == true ? `Unisex: Yes` : ` `}</li>
+        <li style = "color: green;">${restroom.upvote > 0 ? `Upvotes: ${restroom.upvote}` : ` `}</li>
+        <li style = "color: red;">${restroom.downvote > 0 ? `Downvotes: ${restroom.downvote}` : ` `}</li>
+    </div>
       `
       );
     });
@@ -151,7 +161,9 @@ searchButton.addEventListener("click", async function () {
     let work = restrooms.map((restroom) => {
         return `
         <div class="separate">
-            <h3>${restroom.name}</h3>
+        <div id="store2">
+        <b id="store">${restroom.name} </b><i> ${restroom.distance.toFixed(2)} mi.</i>
+        </div>
             <li>${restroom.street} ${restroom.city}, ${restroom.state}</li><br>
             <li>${
               restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `
@@ -197,7 +209,9 @@ addressTextBox.addEventListener("keypress", async function (e) {
     let work = restrooms.map((restroom) => {
         return `
         <div class="separate">
-            <h3>${restroom.name}</h3>
+            <div id="store2">
+            <b id="store">${restroom.name} </b><i> ${restroom.distance.toFixed(2)} mi.</i>
+            </div>
             <li>${restroom.street} ${restroom.city}, ${restroom.state}</li><br>
             <li>${
               restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `
@@ -248,7 +262,9 @@ wheelchair.addEventListener("click", async function () {
   let work = wheelchairItems.map((restroom) => {
     return `
     <div class="separate">
-        <h3>${restroom.name}</h3>
+    <div id="store2">
+    <b id="store">${restroom.name} </b><i> ${restroom.distance.toFixed(2)} mi.</i>
+    </div>
         <li>${restroom.street} ${restroom.city}, ${restroom.state}</li><br>
         <li>${restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `}</li><br>
         <li>${restroom.accessible == true ? `Wheelchair Accessible: Yes` : ` `}</li>
@@ -280,7 +296,9 @@ changing_table.addEventListener("click", async function () {
    let work = changing_tableItems.map((restroom) => {
     return `
     <div class="separate">
-        <h3>${restroom.name}</h3>
+    <div id="store2">
+    <b id="store">${restroom.name} </b><i> ${restroom.distance.toFixed(2)} mi.</i>
+    </div>
         <li>${restroom.street} ${restroom.city}, ${restroom.state}</li><br>
         <li>${restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `}</li><br>
         <li>${restroom.accessible == true ? `Wheelchair Accessible: Yes` : ` `}</li>
@@ -312,7 +330,9 @@ unisex.addEventListener("click", async function () {
    let work = unisexItems.map((restroom) => {
     return `
     <div class="separate">
-        <h3>${restroom.name}</h3>
+    <div id="store2">
+    <b id="store">${restroom.name} </b><i> ${restroom.distance.toFixed(2)} mi.</i>
+    </div>
         <li>${restroom.street} ${restroom.city}, ${restroom.state}</li><br>
         <li>${restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `}</li><br>
         <li>${restroom.accessible == true ? `Wheelchair Accessible: Yes` : ` `}</li>
