@@ -153,17 +153,32 @@ searchButton.addEventListener("click", async function () {
         <div class="separate">
             <h3>${restroom.name}</h3>
             <li>${restroom.street} ${restroom.city}, ${restroom.state}</li><br>
-            <li>${restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `}</li><br>
-            <li>${restroom.accessible == true ? `Wheelchair Accessible: Yes` : ` `}</li>
-            <li>${restroom.changing_table == true ? `Changing Table: Yes` : ` `}</li>
+            <li>${
+              restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `
+            }</li><br>
+            <li>${
+              restroom.accessible == true ? `Wheelchair Accessible: Yes` : ` `
+            }</li>
+            <li>${
+              restroom.changing_table == true ? `Changing Table: Yes` : ` `
+            }</li>
             <li>${restroom.unisex == true ? `Unisex: Yes` : ` `}</li>
-            <li style = "color: green;">${restroom.upvote > 0 ? `Upvotes: ${restroom.upvote}` : ` `}</li>
-            <li style = "color: red;">${restroom.downvote > 0 ? `Downvotes: ${restroom.downvote}` : ` `}</li>
+            <li style = "color: green;">${
+              restroom.upvote > 0 ? `Upvotes: ${restroom.upvote}` : ` `
+            }</li>
+            <li style = "color: red;">${
+              restroom.downvote > 0 ? `Downvotes: ${restroom.downvote}` : ` `
+            }</li> 
+
+            <div id="searchButton">
+            <a href="https://www.google.com/maps/dir/?api=1&${restroom.latitude},${restroom.longitude}" target="_blank">Directions<a>
         </div>
-        `
+        </div>
+        `;
  // add ternary operators to get some of the information in conditional format       
     })
     restroomUL.innerHTML = work.join(" ")
+     
 });
 
 //Adding event listener to addressTextBox (for hitting enter)
@@ -184,14 +199,30 @@ addressTextBox.addEventListener("keypress", async function (e) {
         <div class="separate">
             <h3>${restroom.name}</h3>
             <li>${restroom.street} ${restroom.city}, ${restroom.state}</li><br>
-            <li>${restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `}</li><br>
-            <li>${restroom.accessible == true ? `Wheelchair Accessible: Yes` : ` `}</li>
-            <li>${restroom.changing_table == true ? `Changing Table: Yes` : ` `}</li>
+            <li>${
+              restroom.comment != null ? `<i> ${restroom.comment}</i>` : ` `
+            }</li><br>
+            <li>${
+              restroom.accessible == true ? `Wheelchair Accessible: Yes` : ` `
+            }</li>
+            <li>${
+              restroom.changing_table == true ? `Changing Table: Yes` : ` `
+            }</li>
             <li>${restroom.unisex == true ? `Unisex: Yes` : ` `}</li>
-            <li style = "color: green;">${restroom.upvote > 0 ? `Upvotes: ${restroom.upvote}` : ` `}</li>
-            <li style = "color: red;">${restroom.downvote > 0 ? `Downvotes: ${restroom.downvote}` : ` `}</li>
+            <li style = "color: green;">${
+              restroom.upvote > 0 ? `Upvotes: ${restroom.upvote}` : ` `
+            }</li>
+            <li style = "color: red;">${
+              restroom.downvote > 0 ? `Downvotes: ${restroom.downvote}` : ` `
+            }</li>
+
+            <div id="searchButton">
+            <a href="https://www.google.com/maps/dir/?api=1&${
+              restroom.latitude
+            },${restroom.longitude}" target="_blank">Directions<a>
         </div>
-            `
+        </div>
+            `;
   // add ternary operators to get some of the information in conditional format          
         })
         restroomUL.innerHTML = work.join(" ")
